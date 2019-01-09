@@ -2,5 +2,5 @@
 
 global $r_nikolay;
 
-Вывод поля:
+Вывод поля: <br>
 echo $r_nikolay['field-name'];
