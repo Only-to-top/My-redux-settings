@@ -3,4 +3,4 @@
 global $r_nikolay;
 
 Вывод поля:
-<?php echo $r_nikolay['field-name']; ?>
+echo $r_nikolay['field-name'];
