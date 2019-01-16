@@ -1,5 +1,5 @@
-#### ~/admin/options-init.php
-Your options configuration.
+### theme-options
+require get_template_directory() . '/admin-folder/admin/admin-init.php';
 
 ### global $r_nikolay;
 ### echo $r_nikolay['filed-name'];
