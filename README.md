@@ -3,9 +3,9 @@ require get_template_directory() . '/admin-folder/admin/admin-init.php';
 
 ### global $r_nikolay;
 
-<?php echo $r_nikolay['filed-name']; ?>
+echo $r_nikolay['id'];
 
-<?php echo $r_nikolay['bg-main-1']['url']; ?>
+echo $r_nikolay['id']['url'];
 
 
 
