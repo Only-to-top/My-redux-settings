@@ -135,12 +135,7 @@ Redux::setSection( $opt_name, array(
           ),
           'full_width'        => true,
         ),
-        array(
-          'id'       => 'expir',
-          'type'     => 'text',
-          'title'    => 'Более 10 лет опыта...',
-          'subtitle' => 'Данный текст находится в подвале сайта',
-        ),
+
     )
 ) );
 
@@ -194,22 +189,71 @@ Redux::setSection( $opt_name, array(
 ) );
 
 // Третья подвкладка Главной вкладки
-// Redux::setSection( $opt_name, array(
-//     'title'      => __( 'Text Area', 'redux-framework-demo' ),
-//     'desc'       => __( 'For full documentation on this field, visit: ', 'redux-framework-demo' ) . '<a href="http://docs.reduxframework.com/core/fields/textarea/" target="_blank">http://docs.reduxframework.com/core/fields/textarea/</a>',
-//     'id'         => 'opt-textarea-subsection',
-//     'subsection' => true,
-//     'fields'     => array(
-//         array(
-//             'id'       => 'textarea-example',
-//             'type'     => 'textarea',
-//             'title'    => __( 'Text Area Field', 'redux-framework-demo' ),
-//             'subtitle' => __( 'Subtitle', 'redux-framework-demo' ),
-//             'desc'     => __( 'Field Description', 'redux-framework-demo' ),
-//             'default'  => 'Default Text',
-//         ),
-//     )
-// ) );
+Redux::setSection( $opt_name, array(
+    'title'      => 'Фоновые изображения в шапке',
+    'desc'       => 'Изображения в слайдере на главной странице',
+    'id'         => 'bg-main',
+    'subsection' => true,
+    'fields'     => array(
+        array(
+          'id'       => 'bg-main-1',
+          'type'     => 'media',
+          'url'      => true,
+          'title'    => 'Первое изображение',
+          'compiler' => 'true',
+          // 'desc'     => 'descr',
+          // 'subtitle' => 'subtitle',
+        ),
+        array(
+          'id'       => 'bg-main-2',
+          'type'     => 'media',
+          'url'      => true,
+          'title'    => 'Второе изображение',
+          'compiler' => 'true',
+        ),
+        array(
+          'id'       => 'bg-main-3',
+          'type'     => 'media',
+          'url'      => true,
+          'title'    => 'Третье изображение',
+          'compiler' => 'true',
+        ),
+    )
+) );
+
+
+// Вторая главная вкладка
+Redux::setSection( $opt_name, array(
+  'title'      => 'Фоновые изображения записей и рубрик',
+  'id'         => 'media-media',
+  'desc'       => '',
+  'fields'     => array(
+      array(
+          'id'       => 'bg-category-news',
+          'type'     => 'media',
+          'url'      => true,
+          'title'    => 'Изображение для статей рубрики Новости',
+          'compiler' => 'true',
+          // 'desc'     => 'descr',
+          // 'subtitle' => 'subtitle',
+      ),
+      array(
+        'id'       => 'bg-category-posts',
+        'type'     => 'media',
+        'url'      => true,
+        'title'    => 'Изображение для статей рубрики Статьи',
+        'compiler' => 'true',
+      ),
+      array(
+        'id'       => 'bg-category-video',
+        'type'     => 'media',
+        'url'      => true,
+        'title'    => 'Изображение для статей рубрики Видео',
+        'compiler' => 'true',
+      ),
+  )
+) );
+
 
 /*
   * <--- END SECTIONS
