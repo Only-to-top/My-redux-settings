@@ -5,7 +5,7 @@ require get_template_directory() . '/admin-folder/admin/admin-init.php';
 
 echo $r_nikolay['id'];
 
-echo $r_nikolay['id']['url'];
+echo $r_nikolay['id']['url']; - image
 
 
 
