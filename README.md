@@ -1,12 +1,14 @@
 ### theme-options
+```php
 require get_template_directory() . '/admin-folder/admin/admin-init.php';
+```
 
 ### global $r_nikolay;
-
+```php
 echo $r_nikolay['id'];
 
 echo $r_nikolay['id']['url']; - image
-
+```
 
 
 
