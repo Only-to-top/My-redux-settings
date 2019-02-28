@@ -3,7 +3,7 @@
 require get_template_directory() . '/admin-folder/admin/admin-init.php';
 ```
 ```php
-### global $r_nikolay;
+global $r_nikolay;
 ```
 ```php
 echo $r_nikolay['id'];
