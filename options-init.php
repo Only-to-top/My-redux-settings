@@ -161,6 +161,11 @@ Redux::setSection( $opt_name, array(
           'title'    => 'Ссылка на vk',
         ),
         array(
+          'id'       => 'my_telega',
+          'type'     => 'text',
+          'title'    => 'Ссылка на telegram',
+        ),
+        array(
           'id'       => 'my_twitter',
           'type'     => 'text',
           'title'    => 'Ссылка на twitter',
