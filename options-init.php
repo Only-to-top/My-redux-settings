@@ -96,22 +96,25 @@ Redux::setSection( $opt_name, array(
             'type'     => 'text',
             'title'    => 'Телефон',
             // 'desc'     => 'Example description.',
-            // 'subtitle' => 'Example subtitle.',
+            'subtitle'   => 'Подвал сайта и секция «Контакты»',
         ),
         array(
           'id'       => 'mail',
           'type'     => 'text',
           'title'    => 'E-mail',
+          'subtitle'   => 'Подвал сайта и секция «Контакты»',
         ),
         array(
           'id'       => 'work',
           'type'     => 'text',
           'title'    => 'Время',
+          'subtitle'   => 'Подвал сайта и секция «Контакты»',
         ),
         array(     // с переносом строк
           'id'      => 'address',
           'type'    => 'editor',
           'title'   => 'Адрес',
+          'subtitle'   => 'Подвал сайта и секция «Контакты»',
           'args'    => array(
               'wpautop'       => false,
               'media_buttons' => false,
