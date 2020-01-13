@@ -1,6 +1,6 @@
 ### theme-options
 ```php
-require get_template_directory() . '/admin-folder/admin/admin-init.php';
+require get_template_directory() . '/inc/options-init.php'; # redux
 ```
 ```php
 global $r_nikolay;
