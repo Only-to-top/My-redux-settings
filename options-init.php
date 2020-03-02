@@ -84,65 +84,64 @@
   *
   */
 
-// Главная вкладка
+############################# Главная вкладка
 Redux::setSection( $opt_name, array(
     'title'  => 'Основные настройки - первая вкладка',
     'id'     => 'basic',
     'desc'   => 'Basic field with no subsections.',
     'icon'   => 'el el-home',
     'fields' => array(
+        array(     // с переносом строк
+            'id'      => 'address',
+            'type'    => 'editor',
+            'title'   => 'Адрес в шапке сайта',
+            'args'    => array(
+                'wpautop'       => false,
+                'media_buttons' => false,
+                'textarea_rows' => 3,
+                'teeny'         => false,
+                'quicktags'     => false,
+            ),
+            'full_width'        => true,
+          ),
         array(
             'id'       => 'phone',
             'type'     => 'text',
             'title'    => 'Телефон',
             // 'desc'     => 'Example description.',
-            'subtitle'   => 'Подвал сайта и секция «Контакты»',
+            'subtitle'   => 'Шапка сайта',
         ),
-        array(
-          'id'       => 'mail',
-          'type'     => 'text',
-          'title'    => 'E-mail',
-          'subtitle'   => 'Подвал сайта и секция «Контакты»',
-        ),
+        // array(
+        //   'id'       => 'mail',
+        //   'type'     => 'text',
+        //   'title'    => 'E-mail',
+        //   'subtitle'   => 'Подвал сайта и секция «Контакты»',
+        // ),
         array(
           'id'       => 'work',
           'type'     => 'text',
-          'title'    => 'Время',
-          'subtitle'   => 'Подвал сайта и секция «Контакты»',
+          'title'    => 'Время работы',
+          'subtitle'   => 'Шапка сайта',
         ),
-        array(     // с переносом строк
-          'id'      => 'address',
-          'type'    => 'editor',
-          'title'   => 'Адрес',
-          'subtitle'   => 'Подвал сайта и секция «Контакты»',
-          'args'    => array(
-              'wpautop'       => false,
-              'media_buttons' => false,
-              'textarea_rows' => 6,
-              'teeny'         => false,
-              'quicktags'     => false,
-          ),
-          'full_width'        => true,
-        ),
-        array(     // с переносом строк
-          'id'       => 'our_advantages',
-          'type'     => 'editor',
-          'title'    => 'Наши преимущества',
-          'subtitle' => 'Находятся в подвале сайта',
-          'args'     => array(
-              'wpautop'       => false,
-              'media_buttons' => false,
-              'textarea_rows' => 6,
-              'teeny'         => false,
-              'quicktags'     => false,
-          ),
-          'full_width'        => true,
-        ),
+        // array(     // с переносом строк
+        //   'id'       => 'our_advantages',
+        //   'type'     => 'editor',
+        //   'title'    => 'Наши преимущества',
+        //   'subtitle' => 'Находятся в подвале сайта',
+        //   'args'     => array(
+        //       'wpautop'       => false,
+        //       'media_buttons' => false,
+        //       'textarea_rows' => 6,
+        //       'teeny'         => false,
+        //       'quicktags'     => false,
+        //   ),
+        //   'full_width'        => true,
+        // ),
 
     )
 ) );
 
-// Первая Подвкладка главной вкладки
+// Заголовки
 Redux::setSection( $opt_name, array(
     'title' => 'Основные настройки',
     'id'    => 'basic',
@@ -151,23 +150,23 @@ Redux::setSection( $opt_name, array(
 ) );
 
 
-// Вторая Подвкладка главной вкладки
+// 2
 Redux::setSection( $opt_name, array(
     'title'      => 'Ссылки на соц. сети',
     // 'desc'       => 'Описание',
     'id'         => 'soclincs',
     'subsection' => true,
     'fields'     => array(
-        array(
-          'id'       => 'my_vk',
-          'type'     => 'text',
-          'title'    => 'Ссылка на vk',
-        ),
-        array(
-          'id'       => 'my_telega',
-          'type'     => 'text',
-          'title'    => 'Ссылка на telegram',
-        ),
+        // array(
+        //   'id'       => 'my_vk',
+        //   'type'     => 'text',
+        //   'title'    => 'Ссылка на vk',
+        // ),
+        // array(
+        //   'id'       => 'my_telega',
+        //   'type'     => 'text',
+        //   'title'    => 'Ссылка на telegram',
+        // ),
         array(
           'id'       => 'my_twitter',
           'type'     => 'text',
@@ -183,86 +182,176 @@ Redux::setSection( $opt_name, array(
           'type'     => 'text',
           'title'    => 'Ссылка на pinterest',
         ),
-        array(
-          'id'       => 'my_youtube',
-          'type'     => 'text',
-          'title'    => 'Ссылка на youtube',
-        ),
-        array(
-          'id'       => 'my_instagram',
-          'type'     => 'text',
-          'title'    => 'Ссылка на instagram',
-        ),
+        // array(
+        //   'id'       => 'my_youtube',
+        //   'type'     => 'text',
+        //   'title'    => 'Ссылка на youtube',
+        // ),
+        // array(
+        //   'id'       => 'my_instagram',
+        //   'type'     => 'text',
+        //   'title'    => 'Ссылка на instagram',
+        // ),
     )
 ) );
 
-// Третья подвкладка Главной вкладки
+// 3
 Redux::setSection( $opt_name, array(
-    'title'      => 'Фоновые изображения в шапке',
-    'desc'       => 'Изображения в слайдере на главной странице',
+    'title'      => 'Контакты',
+    'desc'       => 'Адреса. Выводятся в подвале сайта',
     'id'         => 'bg-main',
     'subsection' => true,
     'fields'     => array(
         array(
+            'id'       => 'place',
+            'type'     => 'text',
+            'title'    => 'Название',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
+            'id'       => 'place_addr',
+            'type'     => 'text',
+            'title'    => 'Адрес',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
+            'id'       => 'place_phone',
+            'type'     => 'text',
+            'title'    => 'Адрес',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
           'id'       => 'bg-main-1',
           'type'     => 'media',
           'url'      => true,
-          'title'    => 'Первое изображение',
+          'title'    => 'Изображение',
           'compiler' => 'true',
           // 'desc'     => 'descr',
           // 'subtitle' => 'subtitle',
         ),
-        array(
-          'id'       => 'bg-main-2',
-          'type'     => 'media',
-          'url'      => true,
-          'title'    => 'Второе изображение',
-          'compiler' => 'true',
-        ),
-        array(
-          'id'       => 'bg-main-3',
-          'type'     => 'media',
-          'url'      => true,
-          'title'    => 'Третье изображение',
-          'compiler' => 'true',
-        ),
+        
     )
 ) );
 
 
-// Вторая главная вкладка
+
+############################# ВТОРАЯ ВКЛАДКА
+
+// ВТОРАЯ ГЛАВНАЯ ВКЛАДКА
 Redux::setSection( $opt_name, array(
-  'title'      => 'Фоновые изображения записей и рубрик',
-  'id'         => 'media-media',
-  'desc'       => '',
-  'fields'     => array(
-      array(
-          'id'       => 'bg-category-news',
-          'type'     => 'media',
-          'url'      => true,
-          'title'    => 'Изображение для статей рубрики Новости',
-          'compiler' => 'true',
-          // 'desc'     => 'descr',
-          // 'subtitle' => 'subtitle',
-      ),
-      array(
-        'id'       => 'bg-category-posts',
-        'type'     => 'media',
-        'url'      => true,
-        'title'    => 'Изображение для статей рубрики Статьи',
-        'compiler' => 'true',
-      ),
-      array(
-        'id'       => 'bg-category-video',
-        'type'     => 'media',
-        'url'      => true,
-        'title'    => 'Изображение для статей рубрики Видео',
-        'compiler' => 'true',
-      ),
-  )
+    'title' => 'Адреса',
+    'id'    => 'two',
+    'desc'  => 'Данные, которые выводятся на всех страницах',
+    'icon'  => 'el el-home'
 ) );
 
+// 1
+Redux::setSection( $opt_name, array(
+    'title'      => 'Адрес-1',
+    'id'         => 'media-1',
+    'desc'       => '',
+    'subsection' => true,
+    'fields'     => array(
+        array(
+            'id'       => 'place',
+            'type'     => 'text',
+            'title'    => 'Название',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
+            'id'       => 'place_addr',
+            'type'     => 'text',
+            'title'    => 'Адрес',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
+            'id'       => 'place_phone',
+            'type'     => 'text',
+            'title'    => 'Телефон',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
+            'id'       => 'bg-main-1',
+            'type'     => 'media',
+            'url'      => true,
+            'title'    => 'Изображение',
+            'compiler' => 'true',
+            // 'desc'     => 'descr',
+            // 'subtitle' => 'subtitle',
+        ),
+    )
+) );
 
-/*
-  * <--- END SECTIONS
-  */
+// 2
+Redux::setSection( $opt_name, array(
+    'title'      => 'Адрес-2',
+    'id'         => 'media-2',
+    'desc'       => '',
+    'subsection' => true,
+    'fields'     => array(
+        array(
+            'id'       => 'place2',
+            'type'     => 'text',
+            'title'    => 'Название',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
+            'id'       => 'place_addr2',
+            'type'     => 'text',
+            'title'    => 'Адрес',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
+            'id'       => 'place_phone2',
+            'type'     => 'text',
+            'title'    => 'Телефон',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
+            'id'       => 'bg-main-2',
+            'type'     => 'media',
+            'url'      => true,
+            'title'    => 'Изображение',
+            'compiler' => 'true',
+            // 'desc'     => 'descr',
+            // 'subtitle' => 'subtitle',
+        ),
+    )
+) );
+
+// 3
+Redux::setSection( $opt_name, array(
+    'title'      => 'Адрес-3',
+    'id'         => 'media-3',
+    'desc'       => '',
+    'subsection' => true,
+    'fields'     => array(
+        array(
+            'id'       => 'place3',
+            'type'     => 'text',
+            'title'    => 'Название',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
+            'id'       => 'place_addr3',
+            'type'     => 'text',
+            'title'    => 'Адрес',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
+            'id'       => 'place_phone3',
+            'type'     => 'text',
+            'title'    => 'Телефон',
+            // 'subtitle'   => 'Шапка сайта',
+        ),
+        array(
+            'id'       => 'bg-main-3',
+            'type'     => 'media',
+            'url'      => true,
+            'title'    => 'Изображение',
+            'compiler' => 'true',
+            // 'desc'     => 'descr',
+            // 'subtitle' => 'subtitle',
+        ),
+    )
+) );
